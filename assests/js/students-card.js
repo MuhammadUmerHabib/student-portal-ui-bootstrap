@@ -1,6 +1,3 @@
-
-var array = []
-
 function students_cards() {
     var students_cards_container = document.getElementById("students_cards_container");
 
@@ -10,15 +7,16 @@ function students_cards() {
     var students_card_link = document.createElement("a");
     students_card_link.setAttribute("class", "nav-link active");
     students_card_link.setAttribute("aria-current", "page");
-    students_card_link.setAttribute("href", "./pages/student-details.html");
+    students_card_link.setAttribute("href", "./student-details.html");
 
     var students_card = document.createElement("div");
     students_card.setAttribute("class", "card")
 
     var students_card_image = document.createElement("img")
-    students_card_image.setAttribute("src", "./assests/images/student-image.png")
-    students_card_image.setAttribute("class", "card-img-center mt-1 rounded-circle")
+    students_card_image.setAttribute("src", "../assests/images/student-image.png")
+    students_card_image.setAttribute("class", "card-img-center m-auto p-3 rounded-circle  text-center")
     students_card_image.setAttribute("alt", "Student Image")
+    students_card_image.setAttribute("width", "150px")
 
     var card_body = document.createElement("div")
     card_body.setAttribute("class", "card-body")
@@ -56,7 +54,7 @@ function students_cards() {
     var card_row2_col_p = document.createElement("p")
     card_row2_col_p.setAttribute("class", "card-text fw-light text-secondary")
 
-    var card_row2_col_p_text = document.createTextNode("Gender")
+    var card_row2_col_p_text = document.createTextNode("Name")
 
     var card_row2_col2 = document.createElement("div")
     card_row2_col2.setAttribute("class", "col-6")
@@ -89,7 +87,7 @@ function students_cards() {
     var card_row3_col_p = document.createElement("p")
     card_row3_col_p.setAttribute("class", "card-text fw-light text-secondary")
 
-    var card_row3_col_p_text = document.createTextNode("Qualification")
+    var card_row3_col_p_text = document.createTextNode("Batch")
 
     var card_row3_col2 = document.createElement("div")
     card_row3_col2.setAttribute("class", "col-6")
@@ -105,7 +103,7 @@ function students_cards() {
     var card_row3_col3_p = document.createElement("p")
     card_row3_col3_p.setAttribute("class", "card-text fw-semibold")
 
-    var card_row3_col3_p_text = document.createTextNode("Provided")
+    var card_row3_col3_p_text = document.createTextNode("22")
 
     var card_row3_col4 = document.createElement("div")
     card_row3_col4.setAttribute("class", "col-6")

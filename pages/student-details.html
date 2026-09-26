@@ -13,7 +13,7 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container justify-content-between">
             <a class="navbar-brand" href="#">
-                <img src="./assests/logo.png" alt="Bootstrap" width="90">
+                <img src="../assests/images/logo.png" alt="Bootstrap" width="90">
             </a>
             <div>
                 <a class="btn btn-outline-primary me-1" href="./dashboard.html" role="button">Dashboard</a>
@@ -24,9 +24,11 @@
     </nav>
     <div class="container text-center">
         <div class="row mb-3">
-            <div class="col-8 mt-4">
-                <h2 class="text-start">Student Details</h2>
+            <div class="col-8 mt-3 d-flex align-items-center">
+                <img src="../assests/dashboard.png" class="rounded mb-1" alt="..." height="30px">
+                <h2>Student Details</h2>
             </div>
+
             <div class="col-4 mt-4">
                 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
@@ -47,8 +49,8 @@
                         </div>
                         <div class="mb-3 text-start">
                             <label for="exampleFormControlInput1" class="form-label">Batch #</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Enter Your Batch">
+                            <input type="number" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Enter Your Batch" min="1" max="25">
                         </div>
                         <div class="mb-3 text-start">
                             <label for="formFile" class="form-label">Profile Pic</label>
@@ -137,32 +139,25 @@
                         <div class="mb-3 text-start">
                             <label for="option" class="col-12 form-label">Fee</label>
                             <input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off">
-<label class="btn btn-outline-success me-3" for="option7">Paid</label>
-
-<input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
-<label class="btn btn-outline-danger" for="option8">Unpaid</label>
-
+                            <label class="btn btn-outline-success me-3" for="option7">Paid</label>
+                            <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="option8">Unpaid</label>
                         </div>
                         <div class="col-auto text-start">
-                            <button type="button" class="btn btn-primary mb-3 ps-3 pe-3 rounded-3" data-bs-dismiss="offcanvas" aria-label="Close">Apply</button>
+                            <button type="button" class="btn btn-primary mb-3 ps-3 pe-3 rounded-3"
+                                data-bs-dismiss="offcanvas" aria-label="Close">Apply</button>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
 
         <div class="row">
             <div class="col-3">
                 <div class="card p-3" style="width: 15rem;">
-                    <img src="./assests/image.png" class="card-img-center rounded-circle" alt="...">
-
+                    <img src="../assests/images/student-image.png" class="card-img-center rounded-circle" alt="...">
                 </div>
             </div>
-
         </div>
         <div class="row mb-3">
             <div class="col-10 mt-4">
@@ -179,39 +174,65 @@
                         <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
                             type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Quizes</button>
                         <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Attendance</button>
+                            type="button" role="tab" aria-controls="nav-contact"
+                            aria-selected="false">Attendance</button>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
                         tabindex="0">
-                        <table class="table border border-primary">
+                        <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th scope="col">Number</th>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Submitted Date</th>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Batch</th>
+                                    <th scope="col">Course</th>
+                                    <th scope="col">Fees</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="table-group-divider">
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Bootstrap Assignment # 6</td>
+                                    <td>Match</td>
                                     <td>22</td>
-                                    <td>Web and App Development</td>
+                                    <td>Modern Web Application Development</td>
+                                    <td><button type="button" class="btn btn-outline-danger">UnPaid</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td>Bootstrap assignment # 5</td>
+                                    <td>Jacob</td>
                                     <td>22</td>
-                                    <td>Web and App Development</td>
+                                    <td>Modern Web Application Development</td>
+                                    <td><button type="button" class="btn btn-outline-success">Paid</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
-                                    <td>Bootstrap assignment 4(Tabs)</td>
+                                    <td>John</td>
                                     <td>22</td>
-                                    <td>Web and App Development</td>
+                                    <td>Modern Web Application Development</td>
+                                    <td><button type="button" class="btn btn-outline-danger">UnPaid</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Vadvan</td>
+                                    <td>22</td>
+                                    <td>Modern Web Application Development</td>
+                                    <td><button type="button" class="btn btn-outline-success">Paid</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Noynoe</td>
+                                    <td>22</td>
+                                    <td>Modern Web Application Development</td>
+                                    <td><button type="button" class="btn btn-outline-success">Paid</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Hocal</td>
+                                    <td>22</td>
+                                    <td>Modern Web Application Development</td>
+                                    <td><button type="button" class="btn btn-outline-danger">UnPaid</button></td>
                                 </tr>
                             </tbody>
                         </table>
