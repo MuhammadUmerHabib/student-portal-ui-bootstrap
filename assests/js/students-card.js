@@ -1,4 +1,45 @@
-function students_cards() {
+
+var name_array = ["Saim", "Muhammad Umer Habib", "Ibrar", "Haseeb", "Ahamed"]
+var studentDetails = [
+    {
+        name: "Saim",
+        gender: "Male",
+        birth: "Feb 1, 2009",
+        batch: "22",
+        cnic: "1234567890"
+    },
+    {
+        name: "Muhammad Umer Habib",
+        gender: "Male",
+        birth: "Feb 1, 2009",
+        batch: "22",
+        cnic: "1234567890"
+    },
+    {
+        name: "Ibrar",
+        gender: "Male",
+        birth: "Aug 7, 2008",
+        batch: "22",
+        cnic: "1234567890"
+    },
+    {
+        name: "Haseeb",
+        gender: "Male",
+        birth: "Feb 1, 2009",
+        batch: "22",
+        cnic: "1234567890"
+    },
+    {
+        name: "Saim",
+        gender: "Male",
+        birth: "Feb 1, 2009",
+        batch: "22",
+        cnic: "1234567890"
+    }
+]
+
+function students_cards(name, gender, birth, batch, cnic) {
+
     var students_cards_container = document.getElementById("students_cards_container");
 
     var students_card_main = document.createElement("div");
@@ -46,7 +87,8 @@ function students_cards() {
     var card_name = document.createElement("h5")
     card_name.setAttribute("class", "card-title text-center")
 
-    var card_name_text = document.createTextNode("M. Saim")
+    var card_name_text = document.createTextNode(name)
+
 ////////////2
     var card_row2_col = document.createElement("div")
     card_row2_col.setAttribute("class", "col-6")
@@ -54,7 +96,7 @@ function students_cards() {
     var card_row2_col_p = document.createElement("p")
     card_row2_col_p.setAttribute("class", "card-text fw-light text-secondary")
 
-    var card_row2_col_p_text = document.createTextNode("Name")
+    var card_row2_col_p_text = document.createTextNode("Gender")
 
     var card_row2_col2 = document.createElement("div")
     card_row2_col2.setAttribute("class", "col-6")
@@ -70,7 +112,7 @@ function students_cards() {
     var card_row2_col3_p = document.createElement("p")
     card_row2_col3_p.setAttribute("class", "card-text fw-semibold")
 
-    var card_row2_col3_p_text = document.createTextNode("Male")
+    var card_row2_col3_p_text = document.createTextNode(gender)
 
     var card_row2_col4 = document.createElement("div")
     card_row2_col4.setAttribute("class", "col-6")
@@ -78,7 +120,7 @@ function students_cards() {
     var card_row2_col4_p = document.createElement("p")
     card_row2_col4_p.setAttribute("class", "card-text fw-semibold")
 
-    var card_row2_col4_p_text = document.createTextNode("Feb 1, 2009")
+    var card_row2_col4_p_text = document.createTextNode(birth)
 
     ////////////////////////////////////3
     var card_row3_col = document.createElement("div")
@@ -103,7 +145,7 @@ function students_cards() {
     var card_row3_col3_p = document.createElement("p")
     card_row3_col3_p.setAttribute("class", "card-text fw-semibold")
 
-    var card_row3_col3_p_text = document.createTextNode("22")
+    var card_row3_col3_p_text = document.createTextNode(batch)
 
     var card_row3_col4 = document.createElement("div")
     card_row3_col4.setAttribute("class", "col-6")
@@ -111,7 +153,7 @@ function students_cards() {
     var card_row3_col4_p = document.createElement("p")
     card_row3_col4_p.setAttribute("class", "card-text fw-semibold")
 
-    var card_row3_col4_p_text = document.createTextNode("1234567890")
+    var card_row3_col4_p_text = document.createTextNode(cnic)
 
     /////////
     var card_body_p_a = document.createElement("a")
@@ -190,9 +232,16 @@ function students_cards() {
     ///////
     card_body_collapse.appendChild(card_body_collapse_content)
     card_body_collapse_content.appendChild(card_body_collapse_text)
+
 }
 
-for (var i = 0; i < 5; i++) {
-    students_cards()
+for (var i = 0; i < studentDetails.length; i++) {
+   students_cards(
+    studentDetails[i].name,
+    studentDetails[i].gender,
+    studentDetails[i].birth,
+    studentDetails[i].batch,
+    studentDetails[i].cnic
+   )
 }
 
